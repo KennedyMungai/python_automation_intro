@@ -34,3 +34,9 @@ def extract_news(url):
     content = response.content
 
     soup = BeautifulSoup(content, 'html.parser')
+
+    for i, tag in enumerate(soup.find_all('td', attrs={'class': 'title', 'yalign': ''})):
+        cnt += ((str(i+1) + ' :: ' + tag.text + '\n' + '<br />')
+                ) if tag.next != 'More' else ''
+
+    return cnt
