@@ -14,3 +14,9 @@ now = datetime.datetime.now()
 
 # Email content placeholder
 content = ''
+
+# Extracting Hacker News Stories
+
+
+def extract_news(url):
+    print('Extracting content from hacker news')
