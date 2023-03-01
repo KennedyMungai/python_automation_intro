@@ -32,3 +32,10 @@ msg.attach(MIMEText(content, 'html'))
 print("Initiating Server...")
 
 server = smtplib.SMTP(SERVER, PORT)
+server.set_debuglevel(1)
+server.ehlo()
+server.starttls()
+server.login(FROM, PASS)
+server.sendmail(FROM, TO, msg.as_string())
+
+print('Email sent...')
