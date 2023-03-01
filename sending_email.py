@@ -27,3 +27,5 @@ msg['Subject'] = 'Top News Stories from Hacker News' + ' ' + \
 msg['From'] = FROM
 msg['TO'] = TO
 msg.attach(MIMEText(content, 'html'))
+
+print("Initiating Server...")
