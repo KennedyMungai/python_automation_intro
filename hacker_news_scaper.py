@@ -21,7 +21,11 @@ content = ''
 
 def extract_news(url):
     print('Extracting content from hacker news')
+
     cnt = ''
     cnt += ('<b>Hacker News Top Stories: </b>\n' + '<br>' + '-'*50+'<br>')
+
     response = requests.get(url)
     content = response.content
+
+    soup = BeautifulSoup(content, 'html.parser')
