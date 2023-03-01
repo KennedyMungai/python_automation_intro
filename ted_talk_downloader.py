@@ -18,3 +18,7 @@ r = requests.get(url)
 print('Download about to start')
 
 soup = BeautifulSoup(r.content, features='lxml')
+
+for val in soup.findAll("script"):
+    if (re.search("talkPage.init", str(val))) is not None:
+        result = str(val)
