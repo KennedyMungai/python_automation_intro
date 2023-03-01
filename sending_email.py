@@ -1,3 +1,6 @@
+"""A simple python script for sending emails
+"""
+
 import os
 from dotenv import load_dotenv
 
