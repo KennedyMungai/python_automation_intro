@@ -46,3 +46,5 @@ cnt = extract_news('https://news.ycombinator.com/')
 content += cnt
 content += ('<br> --------------- <br>')
 content += ('<br><br>End of Message')
+
+print(content)
