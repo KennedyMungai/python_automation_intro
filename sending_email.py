@@ -17,7 +17,7 @@ print('Composing Email....')
 SERVER = 'smtp.gmail.com'
 PORT = 587
 FROM = os.getenv("FROM_EMAIL_ADDRESS")
-TO = os.getenv("TO_EMAIL_ADDRESS")
+TO = os.getenv("TO_EMAIL_ADDRESSES")
 PASS = os.getenv("FROM_EMAIL_PASSWORD")
 
 # Creating the message body
@@ -32,10 +32,12 @@ msg.attach(MIMEText(content, 'html'))
 print("Initiating Server...")
 
 server = smtplib.SMTP(SERVER, PORT)
-server.set_debuglevel(1)
+server.set_debuglevel(0)
 server.ehlo()
 server.starttls()
 server.login(FROM, PASS)
 server.sendmail(FROM, TO, msg.as_string())
 
 print('Email sent...')
+
+server.quit()
