@@ -21,3 +21,6 @@ PASS = os.getenv("FROM_EMAIL_PASSWORD")
 
 # Creating the message body
 msg = MIMEMultipart()
+
+msg['Subject'] = 'Top News Stories from Hacker News' + ' ' + \
+    str(now.day) + ' - ' + str(now.month) + ' - ' + str(now.year)
