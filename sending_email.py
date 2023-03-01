@@ -4,7 +4,7 @@
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-from hacker_news_scaper import now
+from hacker_news_scaper import now, content
 
 import os
 from dotenv import load_dotenv
@@ -26,3 +26,4 @@ msg['Subject'] = 'Top News Stories from Hacker News' + ' ' + \
     str(now.day) + ' - ' + str(now.month) + ' - ' + str(now.year)
 msg['From'] = FROM
 msg['TO'] = TO
+msg.attach(MIMEText(content, 'html'))
