@@ -24,3 +24,5 @@ msg = MIMEMultipart()
 
 msg['Subject'] = 'Top News Stories from Hacker News' + ' ' + \
     str(now.day) + ' - ' + str(now.month) + ' - ' + str(now.year)
+msg['From'] = FROM
+msg['TO'] = TO
