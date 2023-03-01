@@ -8,3 +8,6 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 # System Date and Time Manipulation
 import datetime
+
+
+now = datetime.datetime.now()
