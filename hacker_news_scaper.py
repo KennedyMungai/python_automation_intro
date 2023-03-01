@@ -11,3 +11,6 @@ import datetime
 
 
 now = datetime.datetime.now()
+
+# Email content placeholder
+content = ''
