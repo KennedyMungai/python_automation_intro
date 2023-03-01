@@ -1,7 +1,3 @@
-# EmailBody
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
-
 # WebScraping
 from bs4 import BeautifulSoup
 
