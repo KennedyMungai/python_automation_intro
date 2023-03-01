@@ -20,6 +20,11 @@ content = ''
 
 
 def extract_news(url):
+    """A function that holds web scraping logic
+
+    Args:
+        url (string): The location of the website
+    """
     print('Extracting content from hacker news')
 
     cnt = ''
