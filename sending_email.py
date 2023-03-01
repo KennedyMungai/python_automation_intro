@@ -4,6 +4,7 @@
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
+from hacker_news_scaper import now
 
 import os
 from dotenv import load_dotenv
