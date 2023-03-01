@@ -40,3 +40,6 @@ def extract_news(url):
                 ) if tag.next != 'More' else ''
 
     return cnt
+
+
+cnt = extract_news('https://news.ycombinator.com/')
