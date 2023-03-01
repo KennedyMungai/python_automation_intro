@@ -6,6 +6,7 @@ from email.mime.text import MIMEText
 
 from hacker_news_scaper import now, content
 
+import smtplib
 import os
 from dotenv import load_dotenv
 
@@ -29,3 +30,5 @@ msg['TO'] = TO
 msg.attach(MIMEText(content, 'html'))
 
 print("Initiating Server...")
+
+server = smtplib.SMTP(SERVER, PORT)
