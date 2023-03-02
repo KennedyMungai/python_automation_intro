@@ -1,23 +1,11 @@
-# %% [markdown]
-# Importing the required packages
 
-# %%
 import spacy
 import pdfminer
 import re
 import os
 import pandas as pd
 
-# %% [markdown]
-# Imported the code inside the pdf2text file
-
-# %%
 import pdf2txt
-
-# %% [markdown]
-# Converting PDFs to text
-
-# %%
 
 
 def convert_pdf(f):
@@ -27,17 +15,9 @@ def convert_pdf(f):
     print(output_filepath + " saved successfully!!!")
     return open(output_filepath).read()
 
-# %% [markdown]
-# Loading the NLP language model
 
-
-# %%
 nlp = spacy.load('en_core_web_sm')
 
-# %% [markdown]
-# Defined a data structure which has the data fields needed
-
-# %%
 result_dict = {
     'name': [],
     'phone': [],
@@ -49,11 +29,6 @@ names = []
 phones = []
 emails = []
 skills = []
-
-# %% [markdown]
-# Wrote a function that parses the content of a text file
-
-# %%
 
 
 def parse_content(text):
@@ -74,53 +49,19 @@ def parse_content(text):
     skills.append(unique_skills_list)
     print("Extraction completed successfully")
 
-# %% [markdown]
-# Added a for loop so that the logic can work on multiple files instead of one file
 
-
-# %%
 for file in os.listdir('resumes/'):
     if file.endswith('.pdf'):
         print('Reading ' + file)
         txt = convert_pdf(os.path.join('resumes/', file))
         parse_content(txt)
 
-# %%
-names
-
-# %%
-phones
-
-# %%
-emails
-
-# %%
-skills
-
-# %% [markdown]
-# Assigning the individual lists to the result_dict dictionary
-
-# %%
 result_dict['name'] = names
 result_dict['phone'] = phones
 result_dict['email'] = emails
 result_dict['skills'] = skills
 
-# %% [markdown]
-# Showing all the objects in the dictionary
 
-# %%
-result_dict
-
-# %% [markdown]
-# Rendering out the data in a table
-
-# %%
 result_df = pd.DataFrame(result_dict)
-result_df
 
-# %% [markdown]
-# Extract the tabular data to a CSV output file
-
-# %%
 result_df.to_csv('output/csv/parsed_resumes.csv')
