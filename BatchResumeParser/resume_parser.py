@@ -1,3 +1,5 @@
+"""This file holds logic to extract information from resumes in the hard disk
+    """
 
 import spacy
 import pdfminer
