@@ -6,3 +6,5 @@ requirements.txt
 
 .env
 __pycache__
+
+*:Zone.Identifier
