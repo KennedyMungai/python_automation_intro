@@ -5,6 +5,6 @@
     }
   ],
   "settings": {
-    "cSpell.words": ["dotenv", "lxml", "scaper", "yalign"]
+    "cSpell.words": ["dotenv", "factsheet", "lxml", "scaper", "yalign"]
   }
 }
