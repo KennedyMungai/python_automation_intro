@@ -6,6 +6,7 @@
   ],
   "settings": {
     "cSpell.words": [
+      "alttype",
       "astype",
       "barplot",
       "Bechtolsheim",
@@ -15,11 +16,18 @@
       "ents",
       "factsheet",
       "label_",
+      "laparams",
+      "layoutmode",
       "lxml",
+      "maxpages",
       "Menlo",
+      "outfp",
+      "pagenos",
+      "pdfminer",
       "Regognition",
       "scaper",
       "seaborn",
+      "seperated",
       "Shriram",
       "spacy",
       "yalign"
