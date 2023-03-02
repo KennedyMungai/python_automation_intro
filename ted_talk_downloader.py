@@ -1,3 +1,6 @@
+"""A simple script for downloading mp4 files from web pages
+"""
+
 import requests
 
 from bs4 import BeautifulSoup
