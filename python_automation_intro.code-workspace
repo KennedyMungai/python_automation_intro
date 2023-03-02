@@ -7,10 +7,12 @@
   "settings": {
     "cSpell.words": [
       "astype",
+      "barplot",
       "dotenv",
       "factsheet",
       "lxml",
       "scaper",
+      "seaborn",
       "yalign"
     ]
   }
